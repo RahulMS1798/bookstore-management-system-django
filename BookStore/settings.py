@@ -72,7 +72,7 @@ DATABASES = {
     }
 }
 
-DATABASES ["default"] =dj_database_url.parse("postgres://mysite_shwx_user:Qzrq8ssN0OQdtljXOcNhlYk8O5wW4Hfq@dpg-cnf95nla73kc7391r870-a.oregon-postgres.render.com/mysite_shwx")
+DATABASES ["default"] =dj_database_url.parse(os.environ.get("DATABASE_URL"))
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
